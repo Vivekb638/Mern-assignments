@@ -5,6 +5,8 @@
 */
 
 function isAnagram(str1, str2) {
+  str1 = str1.tolowerCase();
+  str2 = str2.toLowerCase();
   if(str1.length !== str2.length) {
     return false;
   }
@@ -15,5 +17,7 @@ function isAnagram(str1, str2) {
   }
   return true;
 }
+const ans = isAnagram("listen", "silent");
+console.log(ans);
 
 module.exports = isAnagram;
